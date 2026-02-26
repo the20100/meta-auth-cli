@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/vincentmaurin/meta-auth-cli/cmd"
+	"github.com/the20100/meta-auth-cli/cmd"
 )
 
 func main() {

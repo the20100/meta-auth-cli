@@ -1,4 +1,4 @@
-module github.com/vincentmaurin/meta-auth-cli
+module github.com/the20100/meta-auth-cli
 
 go 1.22
 

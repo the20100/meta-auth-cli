@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"github.com/vincentmaurin/meta-auth-cli/internal/config"
+	"github.com/the20100/meta-auth-cli/internal/config"
 )
 
 const (
