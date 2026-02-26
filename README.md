@@ -29,6 +29,7 @@ meta-adlib search --query "shoes" --country FR
 ## Installation
 
 ```bash
+git clone https://github.com/the20100/meta-auth-cli
 cd meta-auth-cli
 go build -o meta-auth .
 # Move to your PATH
@@ -144,6 +145,18 @@ Remove saved credentials.
 ```bash
 meta-auth logout
 ```
+
+---
+
+### `meta-auth update` — Self-update
+
+Pull the latest source from GitHub, rebuild, and replace the current binary.
+
+```bash
+meta-auth update
+```
+
+Requires `git` and `go` to be installed.
 
 ---
 
