@@ -114,6 +114,7 @@ func printInfo() {
 	fmt.Printf("    META_APP_ID     = %s\n", maskOrEmpty(os.Getenv("META_APP_ID")))
 	fmt.Printf("    META_APP_SECRET = %s\n", maskOrEmpty(os.Getenv("META_APP_SECRET")))
 	fmt.Printf("    META_TOKEN      = %s\n", maskOrEmpty(os.Getenv("META_TOKEN")))
+	fmt.Println("  (+ aliases accepted, see docs)")
 	fmt.Println()
 	fmt.Println("  token resolution order (all Meta CLIs):")
 	fmt.Println("    1. META_TOKEN env var")
@@ -129,4 +130,14 @@ func maskOrEmpty(v string) string {
 		return "***"
 	}
 	return v[:4] + "..." + v[len(v)-4:]
+}
+
+// resolveEnv returns the value of the first non-empty environment variable from the given names.
+func resolveEnv(names ...string) string {
+	for _, name := range names {
+		if v := os.Getenv(name); v != "" {
+			return v
+		}
+	}
+	return ""
 }
